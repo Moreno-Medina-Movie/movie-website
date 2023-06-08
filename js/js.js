@@ -1,15 +1,46 @@
-<div className="card" style="width: 18rem;">
-    <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-         role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#868e96"></rect>
-        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-    </svg>
 
-    <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        <a href="#" className="btn btn-danger">Go somewhere</a>
-    </div>
-</div>
+
+fetch("https://splendid-ginger-boat.glitch.me/movies").then(resp => resp.json()).then(data=>console.log(data));
+
+function updateLocation(longitude, latitude){
+    const weatherURL = "http://api.openweathermap.org/data/2.5/forecast";
+    $.get(weatherURL,{
+        APPID: OPENWEATHER_KEY,
+        lat: latitude,
+        lon: longitude,
+        units: "imperial"
+    }).done(function(data){
+        let day1Forecast = data.list[0];
+        let day2Forecast = data.list[8];
+        let day3Forecast = data.list[16];
+        let day4Forecast = data.list[24];
+        let day5Forecast = data.list[32];
+        console.log(data);
+
+        updateForecast("#day1", day1Forecast);
+        updateForecast("#day2", day2Forecast);
+        updateForecast("#day3", day3Forecast);
+        updateForecast("#day4", day4Forecast);
+        updateForecast("#day5", day5Forecast);
+
+        let cityName = data.city.name
+        /* POPULATES CITY NAME INTO NAVBAR BY ELEMENT ID*/
+        const $cityNameElement = document.getElementById('cityName');
+        $cityNameElement.innerText = `5 Day Forecast of ${cityName}`;
+    });
+
+const $element = $(elementId);
+$element.html(`
+		<div class="card days">
+			<div class="row">
+				<div class="col-6 dayName"><em>${dayName}</em></div>
+				<div class="col-6 weatherPic"><img src="http://openweathermap.org/img/w/${icon}.png"/></div>
+			</div>
+			<div class="row dayData">
+				<div class="col-3">Temp: ${forecast.main.temp}&deg;F</div>
+				<div class="col-3">Rain: ${forecast.pop}%</div>
+				<div class="col-3">Humidity: ${forecast.main.humidity}%</div>
+				<div class="col-3">Wind: ${forecast.wind.speed} mph</div>
+			</div>
+		</div>
+		`);

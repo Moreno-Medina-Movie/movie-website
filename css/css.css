@@ -4,3 +4,26 @@
 body{
     background: black;
 }
+.movie-card{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 35px;
+}
+.card{
+    width: 180px;
+    height: 600px;
+}
+.movie-pic{
+    margin-top: 10px;
+}
+.movie-title{
+    text-align: center;
+}
+.movie-text{
+    text-align: center;
+}
+.movie-button{
+    justify-content: center;
+    display: flex;
+}
