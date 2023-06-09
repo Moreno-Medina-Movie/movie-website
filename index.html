@@ -5,34 +5,29 @@
 	<title>M&M Movies</title>
 	<!-- CSS LINK -->
 	<link rel="stylesheet" href="css/css.css">
-	<!-- JS LINK -->
-	<script src="js/js.js"></script>
-	<!-- JQUERY SCRIPT -->
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<!-- BOOTSTRAP CDN -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-	<!-- BOOTSTRAP SCRIPT -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
 </head>
 <body>
-<nav class=" navbar navbar-inverse navbar-static-top ">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="#">M&M MOVIES</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-inverse navbar-static-topt bg-transparent">
+	<div class="container-fluid bg-transparent">
+		<a class="navbar-brand text-light bg-transparent text-dark" href="#">M&M MOVIES</a>
+		<button class="navbar-toggler text-light bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon bg-transparent"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+		<div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-transparent">
+				<li class="nav-item bg-transparent">
+					<a class="nav-link active text-light bg-transparent" aria-current="page" href="index.html">HOME</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="movies-page.html">MOVIES</a>
+				<li class="nav-item bg-transparent">
+					<a class="nav-link text-light bg-transparent" href="movies-page.html">MOVIES</a>
 				</li>
 			</ul>
-			<form class="d-flex" role="search">
-				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-danger" type="submit">Search</button>
+			<form class="d-flex bg-transparent" role="search">
+				<input class="form-control me-2 bg-transparent" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-danger bg-transparent" type="submit" id="searchButton">Search</button>
 			</form>
 		</div>
 	</div>
@@ -45,14 +40,47 @@
 
 			</div>
 		</div>
-
 	</div>
+</div>
+
+<div id="addMovie">
+	<form class="addMovie">
+		<div class="form-group row newMovieInput">
+
+			<div class="col-sm-10">
+				<input class="form-control" id="movieTitle" placeholder="Movie Title">
+			</div>
+		</div>
+		<div class="form-group row newMovieInput">
+
+			<div class="col-sm-10">
+				<input class="form-control" id="movieInfo" placeholder="Tell us about your movie! Make it short.">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="newMovieButton">
+				<button type="submit" class="btn btn-primary" id="submitButton">Submit Movie</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div>
+	<select className="form-control" id="movieList">
+
+	</select>
+	<button type="submit" class="btn btn-primary" id="deleteButton">Delete Movie</button>
 </div>
 
 <!--<div class="spinner-border" role="status" id="loader">-->
 <!--	<span class="sr-only"></span>-->
 <!--</div>-->
 
-
+<!-- JQUERY SCRIPT -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!-- BOOTSTRAP SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<!-- JS LINK -->
+<script src="js/js.js"></script>
 </body>
 </html>

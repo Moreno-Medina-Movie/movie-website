@@ -1,8 +1,8 @@
+*{
+    background-color: black;
+}
 .container-fluid{
     color: white;
-}
-body{
-    background: black;
 }
 .movie-card{
     display: flex;
@@ -10,9 +10,12 @@ body{
     align-items: center;
     margin-bottom: 35px;
 }
+.navbar{
+}
 .card{
     width: 180px;
     height: 600px;
+    margin: 1em;
 }
 .movie-pic{
     margin-top: 10px;
@@ -33,5 +36,21 @@ body{
     background-color: #f5c519;
 }
 .movie-info-container{
-    border: 2px black solid;
+}
+.addMovie{
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.newMovieInput{
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newMovieButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
