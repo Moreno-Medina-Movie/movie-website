@@ -32,3 +32,6 @@ body{
     border-radius: 10%;
     background-color: #f5c519;
 }
+.movie-info-container{
+    border: 2px black solid;
+}
