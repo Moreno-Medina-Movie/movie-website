@@ -26,7 +26,9 @@ body{
 .movie-button{
     justify-content: center;
     display: flex;
-    float: left;
-    height: 50px;
-    width: 200px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 10%;
+    background-color: #f5c519;
 }
