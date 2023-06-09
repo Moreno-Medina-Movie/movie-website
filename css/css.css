@@ -26,4 +26,7 @@ body{
 .movie-button{
     justify-content: center;
     display: flex;
+    float: left;
+    height: 50px;
+    width: 200px;
 }
