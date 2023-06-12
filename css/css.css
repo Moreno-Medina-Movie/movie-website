@@ -54,3 +54,9 @@
     justify-content: center;
     align-items: center;
 }
+.modal-text{
+    color: white;
+}
+.modal-color{
+    background-color: gray;
+}
