@@ -25,9 +25,8 @@
 					<a class="nav-link text-light bg-transparent" href="movies-page.html">MOVIES</a>
 				</li>
 			</ul>
-			<form class="d-flex bg-transparent" role="search">
-				<input class="form-control me-2 bg-transparent" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-danger bg-transparent" type="submit" id="searchButton">Search</button>
+			<form class="d-flex bg-transparent" role="search" id="searchForm">
+				<input class="form-control me-2 bg-transparent" type="search" placeholder="Search" aria-label="Search" id="searchInput">
 			</form>
 		</div>
 	</div>
@@ -66,11 +65,12 @@
 </div>
 
 <div>
-	<select className="form-control" id="movieList">
+	<select class="form-control" id="movieList">
 
 	</select>
 	<button type="submit" class="btn btn-primary" id="deleteButton">Delete Movie</button>
 </div>
+
 
 <!--<div class="spinner-border" role="status" id="loader">-->
 <!--	<span class="sr-only"></span>-->
