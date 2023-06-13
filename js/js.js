@@ -1,6 +1,12 @@
 "use strict";
-
 (function () {
+
+	/* LOADING SPINNER */
+	$("#loader").show();
+	setTimeout(function (){
+		$("#loader").hide();
+	}, 500);
+
 	/* API VARIABLE*/
 	let movieURL = "https://splendid-ginger-boat.glitch.me/movies";
 	/* GLOBAL VARIABLE FOR ACCESS*/
@@ -170,5 +176,8 @@
 		}
 		$("#movieList").html(movieOption);
 	}
+
+
+
 
 })();
